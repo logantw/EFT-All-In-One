@@ -1,0 +1,993 @@
+﻿<Window x:Class="WpfApp1.Ammo.QuickAmmo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Ammo"
+        mc:Ignorable="d"
+        Title="Quick Ammo Chart" Height="750" Width="800" ResizeMode="CanMinimize" Topmost="True">
+    <Window.Background>
+        <ImageBrush ImageSource="eft.png" Stretch="None" Opacity="0.3"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <!-- Body Panel -->
+        <Grid Grid.Row="0" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <!-- Header Panel -->
+            <Border Grid.Row="0" Padding="11" Background="Transparent">
+                <!-- Color Grid. -->
+                <Grid>
+                    <TextBlock Text="Green = Best" 
+                               FontSize="20" 
+                               Foreground="Green" 
+                                   Margin="25,0,0,0"/>
+                    <TextBlock Text="Light Green = Above Avg" 
+                               FontSize="20" 
+                               Foreground="LimeGreen" 
+                                   Margin="205,0,0,0"/>
+                    <TextBlock Text="Yellow = Average" 
+                               FontSize="20" 
+                               Foreground="Yellow" 
+                                   Margin="475,0,0,0"/>
+                    <TextBlock Text="Orange = Slighty Below Avg" 
+                               FontSize="20" 
+                               Foreground="Orange" 
+                                   Margin="25,25,0,0"/>
+                    <TextBlock Text="Dark Orange = Below Avg" 
+                               FontSize="20" 
+                               Foreground="OrangeRed" 
+                                   Margin="295,25,0,0"/>
+                    <TextBlock Text="Red = Worst" 
+                               FontSize="20" 
+                               Foreground="Red" 
+                                   Margin="565,25,0,0"/>
+                    <TextBlock Text="Pen Value" 
+                               FontSize="20" 
+                               Foreground="White" 
+                                   Margin="390,70,0,0"/>
+                </Grid>
+            </Border>
+            <ScrollViewer Grid.Row="1" Padding="11"
+                    VerticalScrollBarVisibility="Auto"
+                    HorizontalScrollBarVisibility="Disabled">
+
+                <!-- Ammo Content. -->
+                <Border MinHeight="200">
+                    <Grid>
+
+
+                        <!-- 12 Gauge Shot-->
+                        <TextBlock Margin="25,25,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="12"/><LineBreak/><Run Text="Gauge"/><LineBreak/><Run Text="Shot"/>
+                        </TextBlock>
+                        <TextBlock Text="5.25mm Buckshot"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,0,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="8.5mm Buckshot Magnum"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,25,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="6.5mm Buckshot Express"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,50,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="7mm Buckshot"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,75,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Flechette"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,100,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,110,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,5,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="1"/><LineBreak/><Run Text="2"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="31"/>
+                        </TextBlock>
+
+
+
+                        <!-- 12 Gauge Slug-->
+                        <TextBlock Margin="25,225,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="12"/><LineBreak/><Run Text="Gauge"/><LineBreak/><Run Text="Slug"/>
+                        </TextBlock>
+                        <TextBlock Text="RIP Slug"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,150,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Superformance HP Slug"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,175,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Grizzly 40 Slug"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,200,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Copper Sabot Premier HP"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,225,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Lead Slug"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,250,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Dual Sabot Slug"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,275,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Slug Poleva-3"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,300,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FTX Custom Lite Slug"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,325,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Slug Poleva-6u"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,350,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Shell With .50 BMG (Tracer)"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,375,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="AP 20 Slug"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,400,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,410,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,155,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="2"/><LineBreak/><Run Text="5"/><LineBreak/><Run Text="12"/><LineBreak/><Run Text="14"/><LineBreak/><Run Text="15"/><LineBreak/><Run Text="17"/><LineBreak/><Run Text="17"/><LineBreak/><Run Text="20"/><LineBreak/><Run Text="20"/><LineBreak/><Run Text="26"/><LineBreak/><Run Text="37"/>
+                        </TextBlock>
+
+                        <!-- 20 Gauge-->
+                        <TextBlock Margin="25,475,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="20"/><LineBreak/><Run Text="Gauge"/>
+                        </TextBlock>
+                        <TextBlock Text="5.6mm Buckshot"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,435,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="6.2mm Buckshot"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,460,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="7.5mm Buckshot"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,485,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="7.3mm Buckshot"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,510,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Devastator Slug"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,535,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Slug Poleva-3"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,560,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Star Slug"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,585,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Slug Poleva-6u"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,605,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,610,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,435,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="1"/><LineBreak/><Run Text="2"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="5"/><LineBreak/><Run Text="14"/><LineBreak/><Run Text="16"/><LineBreak/><Run Text="17"/>
+                        </TextBlock>
+
+                        <!-- 23x75mm-->
+                        <TextBlock Margin="25,650,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="23x"/><LineBreak/><Run Text="75mm"/>
+                        </TextBlock>
+                        <TextBlock Text="Star Flashbang Slug"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,650,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Shrapnel 25"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,675,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Shrapnel 10"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,700,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Barricade Slug"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,725,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,735,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,650,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="0"/><LineBreak/><Run Text="10"/><LineBreak/><Run Text="11"/><LineBreak/><Run Text="39"/>
+                        </TextBlock>
+
+                        <!-- 9x18mm-->
+                        <TextBlock Margin="25,925,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="9x"/><LineBreak/><Run Text="18mm"/>
+                        </TextBlock>
+                        <TextBlock Text="SP7"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,775,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PSV"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,800,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="P gzh"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,825,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PSO gzh"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,850,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PS gs PPO"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,875,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PRS gs"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,900,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PPE gzh"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,925,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PPT gzh"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,950,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PST gzh"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,975,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="RG028 gzh"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1000,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BZT gzh"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1025,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PMM"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1050,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PBM"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1075,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,1085,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,775,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="24" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="1"/><LineBreak/><Run Text="2"/><LineBreak/><Run Text="3"/><LineBreak/><Run Text="5"/><LineBreak/><Run Text="5"/><LineBreak/><Run Text="6"/><LineBreak/><Run Text="6"/><LineBreak/><Run Text="7"/><LineBreak/><Run Text="8"/><LineBreak/><Run Text="12"/><LineBreak/><Run Text="13"/><LineBreak/><Run Text="18"/><LineBreak/><Run Text="24"/><LineBreak/><Run Text="28"/>
+                        </TextBlock>
+
+                        <!-- 7.62x25mm-->
+                        <TextBlock Margin="25,1200,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="7.62x"/><LineBreak/><Run Text="25mm"/>
+                        </TextBlock>
+                        <TextBlock Text="LRNPC"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,1125,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="LRN"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,1150,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ43"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1175,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="akbs"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1200,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="P Gl"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1225,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="T Gzh (Tracer)"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1250,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Pst gzh"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1275,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,1285,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,1130,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="7"/><LineBreak/><Run Text="8"/><LineBreak/><Run Text="11"/><LineBreak/><Run Text="12"/><LineBreak/><Run Text="14"/><LineBreak/><Run Text="18"/><LineBreak/><Run Text="25"/>
+                        </TextBlock>
+
+
+                        <!-- 9x19mm-->
+                        <TextBlock Margin="25,1350,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="9x"/><LineBreak/><Run Text="19mm"/>
+                        </TextBlock>
+                        <TextBlock Text="RIP"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,1325,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Quakemaker"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,1350,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PSO gzh"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1375,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Luger CCI"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1400,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="T Gzh (Tracer)"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1425,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PST gzh"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1450,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="AP 6.3"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,1475,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PBP"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,1500,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,1510,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,1325,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="2"/><LineBreak/><Run Text="8"/><LineBreak/><Run Text="10"/><LineBreak/><Run Text="10"/><LineBreak/><Run Text="14"/><LineBreak/><Run Text="20"/><LineBreak/><Run Text="30"/><LineBreak/><Run Text="39"/>
+                        </TextBlock>
+
+                        <!-- .45mm-->
+                        <TextBlock Margin="25,1575,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text=".45"/>
+                        </TextBlock>
+                        <TextBlock Text="RIP"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,1550,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Hydroshok"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1575,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Lasermatch (Tracer)"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1600,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ACP"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,1625,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ACP AP"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,1650,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,1660,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,1550,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="3"/><LineBreak/><Run Text="13"/><LineBreak/><Run Text="19"/><LineBreak/><Run Text="25"/><LineBreak/><Run Text="38"/>
+                        </TextBlock>
+
+
+                        <!-- 9x21mm-->
+                        <TextBlock Margin="25,1725,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="9x"/><LineBreak/><Run Text="21mm"/>
+                        </TextBlock>
+                        <TextBlock Text="PE Gzh"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1700,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="P Gzh"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1725,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PS Gzh"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,1750,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BT (Tracer)"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,1775,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,1785,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,1700,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="15"/><LineBreak/><Run Text="18"/><LineBreak/><Run Text="35"/><LineBreak/><Run Text="39"/>
+                        </TextBlock>
+
+                        <!-- 5.7x28mm-->
+                        <TextBlock Margin="25,1875,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="5.7x"/><LineBreak/><Run Text="28mm"/>
+                        </TextBlock>
+                        <TextBlock Text="r37f"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,1825,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ss198lf"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1850,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="r37x"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,1875,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ss197sr"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,1900,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="l191 (Tracer)"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,1925,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="sb193"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,1950,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ss190"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,1975,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,1985,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,1825,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="8"/><LineBreak/><Run Text="10"/><LineBreak/><Run Text="11"/><LineBreak/><Run Text="20"/><LineBreak/><Run Text="33"/><LineBreak/><Run Text="35"/><LineBreak/><Run Text="37"/>
+                        </TextBlock>
+
+                        <!-- 4.6x30mm-->
+                        <TextBlock Margin="25,2050,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="4.6x"/><LineBreak/><Run Text="30mm"/>
+                        </TextBlock>
+                        <TextBlock Text="Action SX"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,2025,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Subsonic SX"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2050,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ SX"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2075,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="AP SX"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2100,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,2110,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,2025,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="18"/><LineBreak/><Run Text="36"/><LineBreak/><Run Text="40"/><LineBreak/><Run Text="53"/>
+                        </TextBlock>
+
+
+                        <!-- 9x39mmmm-->
+                        <TextBlock Margin="25,2175,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="9x"/><LineBreak/><Run Text="39mm"/>
+                        </TextBlock>
+                        <TextBlock Text="SP5"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2150,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="SP6"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2175,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="SPP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2200,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2225,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,2235,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,2150,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="38"/><LineBreak/><Run Text="46"/><LineBreak/><Run Text="50"/><LineBreak/><Run Text="55"/>
+                        </TextBlock>
+
+
+                        <!-- .366-->
+                        <TextBlock Margin="25,2300,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text=".366"/>
+                        </TextBlock>
+                        <TextBlock Text="Geksa"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,2275,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,2300,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="EKO"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2325,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="AP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2350,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,2360,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,2275,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="14"/><LineBreak/><Run Text="23"/><LineBreak/><Run Text="30"/><LineBreak/><Run Text="42"/>
+                        </TextBlock>
+
+                        <!-- 5.45x39mm-->
+                        <TextBlock Margin="25,2550,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="5.45x"/><LineBreak/><Run Text="39mm"/>
+                        </TextBlock>
+                        <TextBlock Text="SP"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,2400,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="HP"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,2425,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PRS"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,2450,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="US"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,2475,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,2500,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="T (Tracer)"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,2525,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PS"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,2550,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PP"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,2575,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BP"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2600,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BT (Tracer)"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2625,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BS"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2650,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PPBS Igolnik"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2675,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,2685,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,2400,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="11"/><LineBreak/><Run Text="11"/><LineBreak/><Run Text="14"/><LineBreak/><Run Text="15"/><LineBreak/><Run Text="20"/><LineBreak/><Run Text="21"/><LineBreak/><Run Text="27"/><LineBreak/><Run Text="33"/><LineBreak/><Run Text="35"/><LineBreak/><Run Text="37"/><LineBreak/><Run Text="51"/><LineBreak/><Run Text="62"/>
+                        </TextBlock>
+
+                        <!-- 5.56x45mm-->
+                        <TextBlock Margin="25,2850,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="5.56x"/><LineBreak/><Run Text="45mm"/>
+                        </TextBlock>
+                        <TextBlock Text="Warmageddon"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,2725,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="HP"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,2750,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="MK 255 Mod 0"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,2775,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="Mk318 SOST"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,2800,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M856 (Tracer)"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,2825,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,2850,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M855"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,2875,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M856A1 (Tracer)"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2900,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M855A1"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,2925,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M995"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2950,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="SSA AP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,2975,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,2985,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,2725,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="3"/><LineBreak/><Run Text="9"/><LineBreak/><Run Text="17"/><LineBreak/><Run Text="20"/><LineBreak/><Run Text="23"/><LineBreak/><Run Text="24"/><LineBreak/><Run Text="28"/><LineBreak/><Run Text="37"/><LineBreak/><Run Text="45"/><LineBreak/><Run Text="53"/><LineBreak/><Run Text="56"/>
+                        </TextBlock>
+
+
+                        <!-- 7.62x39mm-->
+                        <TextBlock Margin="25,3050,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="7.62x"/><LineBreak/><Run Text="39mm"/>
+                        </TextBlock>
+                        <TextBlock Text="HP"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,3025,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="US"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,3050,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="T45M1"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,3075,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PS"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3100,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3125,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="MAI AP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3150,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3160,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3025,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="15"/><LineBreak/><Run Text="29"/><LineBreak/><Run Text="30"/><LineBreak/><Run Text="32"/><LineBreak/><Run Text="47"/><LineBreak/><Run Text="58"/>
+                        </TextBlock>
+
+
+                        <!-- .300 BLK-->
+                        <TextBlock Margin="25,3200,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text=".300"/><LineBreak/><Run Text="Blk"/>
+                        </TextBlock>
+                        <TextBlock Text="BCP FMJ"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3200,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="AP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3225,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3235,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3200,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="28"/><LineBreak/><Run Text="44"/>
+                        </TextBlock>
+
+                        <!-- 7.62x51mm-->
+                        <TextBlock Margin="25,3325,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="7.62x"/><LineBreak/><Run Text="51mm"/>
+                        </TextBlock>
+                        <TextBlock Text="Ultra Nosler"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,3275,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,3300,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="SP"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,3325,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M80"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3350,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M62 (Tracer)"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3375,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M61"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3400,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="M993"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3425,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3435,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3275,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="15"/><LineBreak/><Run Text="31"/><LineBreak/><Run Text="36"/><LineBreak/><Run Text="41"/><LineBreak/><Run Text="44"/><LineBreak/><Run Text="64"/><LineBreak/><Run Text="70"/>
+                        </TextBlock>
+
+                        <!-- 7.62x54r-->
+                        <TextBlock Margin="25,3500,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="7.62x"/><LineBreak/><Run Text="54r"/>
+                        </TextBlock>
+                        <TextBlock Text="T-46M (Tracer)"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3475,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="LPS Gzh"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3500,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="PS"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3525,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BT (Tracer)"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3550,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="SNB"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3575,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="BS"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3600,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3610,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3475,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="41"/><LineBreak/><Run Text="42"/><LineBreak/><Run Text="45"/><LineBreak/><Run Text="59"/><LineBreak/><Run Text="62"/><LineBreak/><Run Text="70"/>
+                        </TextBlock>
+
+                        <!-- 12.7x55mm-->
+                        <TextBlock Margin="25,3650,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="12.7x"/><LineBreak/><Run Text="55mm"/>
+                        </TextBlock>
+                        <TextBlock Text="ps12a"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,3650,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ps12"
+                                   FontSize="20"
+                                   Foreground="Orange"
+                                   Margin="150,3675,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="ps12b"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3700,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3710,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3650,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="10"/><LineBreak/><Run Text="28"/><LineBreak/><Run Text="46"/>
+                        </TextBlock>
+
+                        <!-- .388 Lapua Magnum-->
+                        <TextBlock Margin="05,3750,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text=".388 Lapua"/><LineBreak/><Run Text="Magnum"/>
+                        </TextBlock>
+                        <TextBlock Text="Tac-X"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,3750,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="UPZ"
+                                   FontSize="20"
+                                   Foreground="Yellow"
+                                   Margin="150,3775,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ"
+                                   FontSize="20"
+                                   Foreground="LimeGreen"
+                                   Margin="150,3800,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="AP"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3825,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3835,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3750,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="18"/><LineBreak/><Run Text="32"/><LineBreak/><Run Text="47"/><LineBreak/><Run Text="79"/>
+                        </TextBlock>
+
+                        <!-- Mounted Weapons-->
+                        <TextBlock Margin="05,3875,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="Mounted"/><LineBreak/><Run Text="Weapons"/>
+                        </TextBlock>
+                        <TextBlock Text="30mm Grenade"
+                                   FontSize="20"
+                                   Foreground="Red"
+                                   Margin="150,3875,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="12.7x108mm"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3900,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="FMJ"
+                                   FontSize="20"
+                                   Foreground="Green"
+                                   Margin="150,3925,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3935,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="350,3875,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="1 - explosion radius does all of the damage"/><LineBreak/><Run Text="88"/><LineBreak/><Run Text="80"/>
+                        </TextBlock>
+
+                        <!-- Other-->
+                        <TextBlock Margin="05,3975,0,0" FontSize="28" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="Other"/>
+                        </TextBlock>
+                        <TextBlock Text="40mm Buckshot Grenade"
+                                   FontSize="20"
+                                   Foreground="OrangeRed"
+                                   Margin="150,3975,0,0" TextDecorations="Underline"/>
+                        <TextBlock Text="____________________________________________________________________________________________"
+                                   FontSize="20"
+                                   Foreground="White"
+                                   Margin="0,3985,0,0" TextDecorations="Underline"/>
+                        <!-- Pen Value-->
+                        <TextBlock Margin="425,3975,0,0" LineStackingStrategy="BlockLineHeight" LineHeight="25" FontSize="20" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontFamily="Cambria Math">
+                            
+                            <Run Text="5 - (15 pellets)"/>
+                        </TextBlock>
+
+                    </Grid>
+
+
+
+
+
+
+                </Border>
+
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
